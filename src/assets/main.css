@@ -1,0 +1,106 @@
+@import "./base.css";
+
+a {
+  color: var(--maroon);
+  text-decoration: none;
+}
+
+p {
+  margin-block-end: 15px;
+}
+
+hr {
+  height: 2px;
+  background-color: var(--grey);
+  border: none;
+  margin-block-end: 15px;
+}
+
+button {
+  font-family: var(--headerfont);
+  color: var(--grey);
+  background-color: white;
+  border-radius: 3px;
+  border: 2px solid var(--maroon);
+  box-shadow: 3px 3px var(--ltgrey);
+  padding: 0.1rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+li {
+  list-style-type: none;
+  margin: 0 0.2rem 0.8rem 0.2rem;
+}
+
+ul {
+  padding: 0;
+}
+
+button:hover {
+  color: var(--maroon);
+  background-color: var(--btngrey);
+  box-shadow: 1px 1px var(--ltgrey);
+}
+
+p:first-child {
+  text-align: left;
+}
+
+section {
+  position: relative;
+}
+
+.hidden {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+}
+
+.page {
+  padding: 1.5rem 5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 80rem;
+}
+
+body {
+  min-height: 100vh;
+
+  font-family: var(--bodyfont);
+  font-weight: 100;
+  color: var(--textgrey);
+  padding: 0 0.5rem;
+}
+main {
+  width: 75%;
+  margin: 0;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 0.9rem;
+  }
+  main {
+    width: 100%;
+    padding: 1.5rem;
+  }
+  .page {
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0.5rem;
+  }
+}
