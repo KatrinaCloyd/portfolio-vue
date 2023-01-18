@@ -26,6 +26,12 @@ button {
   padding: 0.1rem 1.5rem;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+  margin: 15px 0px;
+}
+button:disabled {
+  pointer-events: none;
+  border: 2px solid var(--ltgrey);
+  color: var(--ltgrey);
 }
 li {
   list-style-type: none;
@@ -38,7 +44,6 @@ ul {
 
 button:hover {
   color: var(--maroon);
-  background-color: var(--btngrey);
   box-shadow: 1px 1px var(--ltgrey);
 }
 
