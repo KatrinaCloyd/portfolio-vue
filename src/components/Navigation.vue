@@ -34,17 +34,17 @@ const currentPage = (page) => {
       <li>
         <a
           class="navItem"
-          :class="{ selected: currentPage('/PlayVue') }"
-          href="/PlayVue"
-          >VUE FUN</a
+          :class="{ selected: currentPage('/Contact') }"
+          href="/Contact"
+          >CONTACT</a
         >
       </li>
       <li>
         <a
           class="navItem"
-          :class="{ selected: currentPage('/Contact') }"
-          href="/Contact"
-          >CONTACT</a
+          :class="{ selected: currentPage('/PlayVue') }"
+          href="/PlayVue"
+          >VUE FUN</a
         >
       </li>
     </ul>
