@@ -34,7 +34,7 @@ function closeModal() {
   top: 0;
   left: 0;
   position: fixed;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(54, 50, 46, 0.5);
   width: 100vw;
   height: 100vh;
 }
