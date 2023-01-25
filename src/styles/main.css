@@ -46,6 +46,28 @@ button:hover {
   color: var(--maroon);
   box-shadow: 1px 1px var(--ltgrey);
 }
+label,
+input,
+select {
+  margin-left: 0;
+  display: block;
+  width: 100%;
+}
+
+input,
+select {
+  border: 1px solid var(--grey);
+  border-radius: 3px;
+  margin-bottom: 1rem;
+}
+input:focus,
+select:focus {
+  outline: 1px solid var(--maroon);
+}
+label {
+  font-size: 12px;
+  margin-bottom: 0.25rem;
+}
 
 p:first-child {
   text-align: left;

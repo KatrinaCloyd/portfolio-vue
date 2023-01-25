@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, computed } from "vue";
 import ModalWindow from "./ModalWindow.vue";
+import FormModal from "./FormModal.vue";
 import ReactionGame from "./ReactionGame.vue";
 
 const books = ref([
@@ -34,6 +35,7 @@ const filteredBooks = computed(() => {
 });
 
 let modalOpen = ref(false);
+let formModalOpen = ref(false);
 const modalText = ref("Default Modal Text");
 const modalStyle = ref("");
 const openModalOne = () => {
@@ -49,13 +51,20 @@ const openModalTwo = () => {
 const closeModal = () => {
   modalOpen.value = false;
 };
+const openFormModal = () => {
+  formModalOpen.value = true;
+};
+const closeForm = () => {
+  formModalOpen.value = false;
+};
 </script>
 <template>
   <section>
     <h2 class="hiddenX">Playing around with Vue State!</h2>
     <button @click="count++">{{ buttonLabel }}</button>
-    <button @click="openModalOne">Modal Button One</button>
-    <button @click="openModalTwo">Modal Button Two</button>
+    <button @click="openModalOne">Modal One</button>
+    <button @click="openModalTwo">Modal Two</button>
+    <button @click="openFormModal">Form Modal</button>
     <p>Count: {{ count }}</p>
 
     <h2>Book list</h2>
@@ -65,7 +74,7 @@ const closeModal = () => {
         v-for="book in books"
         @click="changeFav(book)"
         :key="book.title"
-        class="book"
+        class="book bookbtn"
         :class="{ fav: book.isFav }"
       >
         <span>{{ book.title }}</span>
@@ -74,20 +83,22 @@ const closeModal = () => {
     </ul>
     <h2>Computed Properties</h2>
     <p>List of only favorite books:</p>
-    <ul>
+    <p v-if="filteredBooks.length < 1">No fav books... 😢</p>
+    <ul v-else>
       <li v-for="book in filteredBooks" :key="book.title" class="book">
         <span>{{ book.title }}</span>
         <span>{{ book.author }}</span>
       </li>
     </ul>
   </section>
+  <ReactionGame />
   <ModalWindow
     v-if="modalOpen"
     :text="modalText"
     :style="modalStyle"
     @closeModal="closeModal"
   />
-  <ReactionGame />
+  <FormModal v-if="formModalOpen" @closeForm="closeForm" />
 </template>
 
 <style scoped>
@@ -104,6 +115,9 @@ button {
   border-radius: 3px;
   display: flex;
   justify-content: space-between;
+}
+.bookbtn {
+  cursor: pointer;
 }
 .fav {
   background-color: var(--maroon);

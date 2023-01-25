@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const currentPage = (page) => {
+const currentPage = (page: string) => {
   if (page === window.location.pathname) {
     return true;
   }
