@@ -1,0 +1,36 @@
+{
+  "movies": [
+    {
+      "title": "The Little Mermaid", "id": 1, "details": "Favorite when I was 9."
+    },
+    {
+      "title": "Moana", "id": 2, "details": "Favorite when I was today years old."
+    },
+    {
+      "title": "Onward", "id": 1, "details": "Favorite when we include Pixar."
+    }
+  ],
+  "books": [
+    {
+      "title": "The Starless Sea",
+      "author": "Erin Morgenstern",
+      "img": "src/assets/tss.png",
+      "isFav": true,
+      "id": 1
+    },
+    {
+      "title": "The Night Circus",
+      "author": "Erin Morgenstern",
+      "img": "src/assets/tnc.png",
+      "isFav": true,
+      "id": 2
+    },
+    {
+      "title": "A Discovery of Witches",
+      "author": "Deborah Harkness",
+      "img": "src/assets/adw.png",
+      "isFav": false,
+      "id": 3
+    }
+  ]
+}

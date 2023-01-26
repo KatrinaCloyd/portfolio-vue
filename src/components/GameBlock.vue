@@ -1,6 +1,6 @@
 <!-- eslint-disable @typescript-eslint/no-unused-vars -->
 <script setup lang="ts">
-import { ref, computed, onMounted, onUpdated, toRefs } from "vue";
+import { ref, onMounted, toRefs } from "vue";
 import type { Ref } from "vue";
 const props = defineProps<{
   delay: number;
