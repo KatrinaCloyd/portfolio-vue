@@ -1,6 +1,5 @@
-<!-- eslint-disable @typescript-eslint/no-unused-vars -->
 <script setup lang="ts">
-import { ref, computed } from "vue";
+import { ref } from "vue";
 const emit = defineEmits(["closeForm"]);
 
 function closeForm() {

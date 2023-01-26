@@ -8,19 +8,27 @@ import Navigation from "./components/Navigation.vue";
 import ContactPage from "./components/ContactPage.vue";
 import DetailPage from "./components/DetailPage.vue";
 
-const routes = {
-  "/": HomePage,
-  "/About": AboutPage,
-  "/DevWork": DevWorkPage,
-  "/PlayVue": PlayVue,
-  "/Contact": ContactPage,
-};
-
 const currentView = computed(() => {
   if (window.location.search) {
     return DetailPage;
   }
-  return routes[window.location.pathname || "/"];
+  switch (window.location.pathname) {
+    case "/About": {
+      return AboutPage;
+    }
+    case "/DevWork": {
+      return DevWorkPage;
+    }
+    case "/PlayVue": {
+      return PlayVue;
+    }
+    case "/Contact": {
+      return ContactPage;
+    }
+    default: {
+      return HomePage;
+    }
+  }
 });
 </script>
 

@@ -68,7 +68,6 @@ const currentPage = (page: string) => {
   border-bottom: 3px solid white;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  margin-block-end: ;
 }
 
 .navItem:hover {
