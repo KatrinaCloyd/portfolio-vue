@@ -15,7 +15,7 @@ const backToDevPg = () => {
 };
 </script>
 <template>
-  <section>
+  <section v-if="currentProj">
     <h2 class="title">{{ currentProj.title }}</h2>
     <p class="tech">{{ currentProj.tech }}</p>
     <div class="icons">

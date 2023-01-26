@@ -1,6 +1,5 @@
-<!-- eslint-disable @typescript-eslint/no-unused-vars -->
 <script setup lang="ts">
-const props = defineProps<{
+defineProps<{
   text: string;
   style: string;
 }>();
